@@ -1,11 +1,21 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const meshRef = useRef();
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      // Gentle floating/breathing animation
+      meshRef.current.position.y = Math.sin(state.clock.getElapsedTime() * 1.2) * 0.12;
+      // Auto-rotation/swivel around Y axis
+      meshRef.current.rotation.y = Math.sin(state.clock.getElapsedTime() * 0.6) * 0.15;
+    }
+  });
 
   return (
     <mesh>
@@ -19,12 +29,14 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <pointLight intensity={1} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
+      <mesh ref={meshRef}>
+        <primitive
+          object={computer.scene}
+          scale={isMobile ? 0.7 : 0.75}
+          position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+          rotation={[-0.01, -0.2, -0.1]}
+        />
+      </mesh>
     </mesh>
   );
 };
@@ -55,7 +67,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop='always'
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}

@@ -1,11 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Contact, Hero, Navbar, Works, Projects, StarsCanvas } from "./components";
+import { About, Contact, Hero, Navbar, Works, Projects, StarsCanvas, CursorTrail } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
+        <CursorTrail />
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
           <Hero />

@@ -21,6 +21,7 @@ import figmaIcon      from "../assets/icon/figma.png";
 import illustratorIcon from "../assets/icon/adobe illustrator.png";
 import indesignIcon   from "../assets/icon/adobe inDesign.png";
 import photoshopIcon  from "../assets/icon/adobe photshop.png";
+import firebaseIcon   from "../assets/icon/firebase.svg";
 
 const stackCategories = [
   {
@@ -43,6 +44,7 @@ const stackCategories = [
     items: [
       { name: "PostgreSQL", img: postgresIcon },
       { name: "MySQL",      img: mysqlIcon },
+      { name: "Firebase",   img: firebaseIcon },
     ],
   },
   {

@@ -9,6 +9,7 @@ import Projects from "./Projects";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import CursorTrail from "./CursorTrail";
 
 
 export {
@@ -25,5 +26,6 @@ export {
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  CursorTrail
 };
