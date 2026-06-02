@@ -199,9 +199,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Gestion de Stock AIGLE D'OR",
+    name: "Gestion de Notes Étudiants",
     description:
-      "Une application web professionnelle de gestion de stock et d'inventaire conçue pour AIGLE D'OR, permettant un suivi en temps réel des articles, des alertes de stock et des rapports détaillés.",
+      "Une application web intuitive de gestion des notes et du suivi académique des étudiants, permettant le calcul automatique des moyennes, le suivi des performances et la génération de bulletins scolaires.",
     tags: [
       {
         name: "React",

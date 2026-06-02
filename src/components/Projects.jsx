@@ -7,11 +7,11 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const projects = [
   {
-    name: "Stock Management — AIGLE D'OR",
+    name: "Student Grade Management",
     description:
-      "A professional web application for stock and inventory management built for AIGLE D'OR. Features real-time item tracking, low-stock alerts, and detailed reporting dashboards.",
+      "An intuitive web application for student grade management and academic tracking. Features automatic GPA calculation, progress tracking, and report card generation.",
     tags: [
-      { name: "React",      bg: "#20232a", color: "#61dafb", border: "#61dafb" },
+      { name: "Spring Boot", bg: "#1b3024", color: "#6db33f", border: "#6db33f" },
       { name: "PostgreSQL", bg: "#1a2744", color: "#4fc3f7", border: "#336791" },
     ],
   },
@@ -20,17 +20,18 @@ const projects = [
     description:
       "A modern, high-performance online store using React for the frontend, connected to the headless Bagisto (Laravel) API for catalog management, shopping cart, and order processing.",
     tags: [
-      { name: "React",      bg: "#20232a", color: "#61dafb", border: "#61dafb" },
-      { name: "Laravel",    bg: "#2d0a0a", color: "#ff6b6b", border: "#ff2d20" },
+      { name: "React", bg: "#20232a", color: "#61dafb", border: "#61dafb" },
+      { name: "Laravel", bg: "#2d0a0a", color: "#ff6b6b", border: "#ff2d20" },
       { name: "PostgreSQL", bg: "#1a2744", color: "#4fc3f7", border: "#336791" },
     ],
   },
 ];
 
 const tagColors = {
-  React:      { bg: "#20232a", text: "#61dafb", border: "#61dafb", glow: "#61dafb55" },
+  React: { bg: "#20232a", text: "#61dafb", border: "#61dafb", glow: "#61dafb55" },
+  "Spring Boot": { bg: "#1b3024", text: "#6db33f", border: "#6db33f", glow: "#6db33f55" },
   PostgreSQL: { bg: "#0d1f3c", text: "#7ec8e3", border: "#336791", glow: "#33679155" },
-  Laravel:    { bg: "#2d0808", text: "#ff7a7a", border: "#ff2d20", glow: "#ff2d2055" },
+  Laravel: { bg: "#2d0808", text: "#ff7a7a", border: "#ff2d20", glow: "#ff2d2055" },
 };
 
 const TechTag = ({ name, bg, color, border }) => (
